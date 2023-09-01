@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles' Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="calculator">
+        <h1 class="brown">Charles' Tip Calculator</h1>
+        <form id="tipForm">
+            <label for="billAmount"  class="brown top"  >How much was your bill?</label>
+          <div><span>Rs.</span><input type="number" id="billAmount" placeholder="Enter bill amount" required></div>
+            <label for="serviceRating" class="brown" id="space">How was your service?</label>
+            <select id="serviceRating" required>
+                <option value="0.3">Excellent (30%)</option>
+                <option value="0.2">Good (20%)</option>
+                <option value="0.15">Average (15%)</option>
+                <option value="0.1">Fair (10%)</option>
+                <option value="0.05">Poor (5%)</option>
+            </select>
+            <label for="numOfPeople" class="brown top">How many people are sharing the bill?</label>
+            <input type="number" id="numOfPeople" placeholder="Enter number of people" required>
+            <button type="button" id="calculate">Calculate Tip</button>
+        </form>
+        <div id="results">
+            <p class="brown top">Tip Amount (per person): </p>
+            <div class="tip"><span id="tipAmount"></span></div>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
